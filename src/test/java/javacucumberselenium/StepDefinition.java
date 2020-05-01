@@ -86,6 +86,8 @@ public class StepDefinition {
 	public WebDriver getDriver() {
 		WebDriver driver = null;
 		System.setProperty("webdriver.gecko.driver","/home/adriano/workspace-neon-2/geckodriver");
+		System.setProperty(FirefoxDriver.SystemProperty.DRIVER_USE_MARIONETTE,"true");
+		System.setProperty(FirefoxDriver.SystemProperty.BROWSER_LOGFILE,"/dev/null");
 
 		//configura Headless mode (sem abrir browser)
 		FirefoxOptions options = new FirefoxOptions();
